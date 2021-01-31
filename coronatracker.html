@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coronavirus Outbreak in Country - covid19</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!--Angular JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <!--My Script  -->
+    <script src="./js/app.js"></script>
+    <!--My CSS-->
+    <link rel="stylesheet" href="./css/app.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body ng-app="MyApp" ng-controller="MyController">
+
+    <div class="container mt-2">
+        <div class="jumbotron text-center p-2">
+            <h1 style="color: red;" class="text-center">Live <span><b>Covid-19</b></span> Tracker</h1>
+            <div class="row">
+
+                <div class="col-md-4">
+                    <img src="./img/man.png" alt="">
+                </div>
+                <div class="col-md-4">
+                    <h3>
+                        {{title}}
+                    </h3>
+                </div>
+                <div class="col-md-4">
+                    <img src="./img/corona cartoon.png" alt="">
+                </div>
+            </div>
+
+           
+
+            <!-- All data -->
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <div class="card bg-primary">
+                        <div class="card-body ">
+                            <h2>Confirmed Cases</h2>
+                            <h1 class="text-white"><b>{{all_data.confirmed.value}}</b></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-success">
+                        <div class="card-body">
+                            <h2>Recovered Cases</h2>
+                            <h1 class="text-white"><b>{{all_data.recovered.value}}</b></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card bg-danger">
+                        <div class="card-body ">
+                            <h2>Death Cases</h2>
+                            <h1 class="text-white"><b>{{all_data.deaths.value}}</b></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End all data -->
+
+            <input type="text" class="form-control mt-3" name="" id="" placeholder="Enter country here"
+                ng-model="country" ng-change="getCountryData()" />
+
+            <!-- Country Data -->
+            <div class="container-fluid" ng-if="c_data">
+                <h2 class="text-center mt-4 text-uppercase">{{country}} STATUS</h2>
+                <div class="row mt-1">
+
+                    <div class="col-md-4">
+                        <div class="card bg-primary">
+                            <div class="card-body ">
+                                <h2>Confirmed Cases</h2>
+                                <h1 class="text-white"><b>{{c_data.confirmed.value}}</b></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-success">
+                            <div class="card-body">
+                                <h2>Recovered Cases</h2>
+                                <h1 class="text-white"><b>{{c_data.recovered.value}}</b></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-danger">
+                            <div class="card-body ">
+                                <h2>Death Cases</h2>
+                                <h1 class="text-white"><b>{{c_data.deaths.value}}</b></h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Country Date -->
+        </div>
+    </div>
+</body>
+
+</html>
