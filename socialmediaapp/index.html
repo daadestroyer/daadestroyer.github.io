@@ -1,0 +1,287 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <script>
+    var d = new Date();
+    var weekday = new Array(7);
+    var months = new Array(12);
+    weekday[0] = "Sunday";
+    weekday[1] = "Monday";
+    weekday[2] = "Tuesday";
+    weekday[3] = "Wednesday";
+    weekday[4] = "Thursday";
+    weekday[5] = "Friday";
+    weekday[6] = "Saturday";
+
+    months[0] = "January";
+    months[1] = "February";
+    months[2] = "March";
+    months[3] = "April";
+    months[4] = "May";
+    months[5] = "June";
+    months[6] = "July";
+    months[7] = "August";
+    months[8] = "September";
+    months[9] = "October";
+    months[10] = "November";
+    months[11] = "December";
+
+    var day = weekday[d.getDay()]
+    var month = months[d.getMonth()]
+  </script>
+
+
+  <style>
+    body {
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    #navlinks {
+      color: #4267B2;
+      font-weight: bolder;
+      font-size: 1.5em;
+    }
+
+    .profile-info>h3 {
+      color: rgb(97, 97, 238);
+      font-size: 1.5em;
+    }
+
+    .profile-info>p {
+      color: black;
+      font-size: .9em;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light"
+    style="background-color: gray; box-shadow: 3px 3px 3px grey">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbartoggler"
+      aria-controls="navbartoggler">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbartoggler">
+      <a class="navbar-brand" href="#" style="font-size: 2em">Social Media App</a>
+      <img src="./img/logo.png" alt="" />
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link ml-5" href="#"><span id="navlinks">Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ml-5" href="#"><span id="navlinks">Message</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link ml-5" href="#"><span id="navlinks">Notification</span></a>
+        </li>
+      </ul>
+
+      <div class="btn-group m-3">
+        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false" style="background-color: #4267B2;">
+          <img src="./img/mypic.jpeg" alt="" height="40px" width="40px" />
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Profile</a>
+          <a class="dropdown-item" href="#">Inbox</a>
+          <a class="dropdown-item" href="#">Activity</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Settings</a>
+        </div>
+      </div>
+      <button type="button" class="btn btn-outline-success m-3">
+        LOGOUT
+      </button>
+      <!-- <button type="button" class="btn btn-outline-danger m-3">SIGNUP</button> -->
+    </div>
+  </nav>
+
+  <div class="container-fluid ">
+    <div class="row m-5">
+      <div class="col-md-3 col-sm-3 col-lg-3 col-xl-3 " style="box-shadow: 3px 3px  grey;height:auto;">
+        <div class="card">
+          <h5 class=" text-center" style="font-weight: bold;">
+            <script>document.write(d.getDate() + " " + month + " " + " " + d.getFullYear() + " , " + day + " IST")</script>
+          </h5>
+          <div class="card-body">
+            <h5 class="card-title text-center">Shubham Nigam</h5>
+            <img src="./img/mypic.jpeg" class="rounded-circle mx-auto d-block" alt="">
+            <p class="card-text">Any one can join with but Social network us if you want Any one can join with us if you
+              want</p>
+            <div class="container text-center">
+              <a href="#" class="btn btn-primary" style="background-color: #4267B2;">My Profile</a>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+
+      <!------------------------------------------------ left div end ------------------------------------------->
+
+
+      <div class="col-md-6 col-sm-6 col-lg-6 col-xl-6 mt-3">
+        <!-- Button trigger modal -->
+        <button style="background-color: #4267B2;" type="button" class="btn btn-primary btn-lg btn-block"
+          data-toggle="modal" data-target="#exampleModal">
+
+          Write something here...
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  What's on your mind
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="name">Write something...</label>
+                  <textarea class="form-control" rows="3" placeholder="Player Details"></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-3 col-lg-3 col-xl-3 " style="box-shadow: 3px 3px 3px grey;">
+        <div class="card">
+          <h5 class="card-header text-center" style="font-weight: bold;">
+            Recent Notifications
+          </h5>
+          <div class="card-body">
+            <div class="profile1">
+              <img src="./img/profile/profile-midle-2.jpg" height="80px" width="80px" alt="">
+            </div>
+            <div class="profile-info">
+              <h3 class="list-title">Any one can join with us if you want</h3>
+              <button type="button" class="btn btn-outline-danger btn-sm p-1">Read More</button>
+              <p class="list-subtitle text-left mt-1">5 min ago</p>
+            </div>
+            <div class="profile1">
+              <img src="./img/profile/profile-midle-2.jpg" height="80px" width="80px" alt="">
+            </div>
+            <div class="profile-info">
+              <h3 class="list-title">Any one can join with us if you want</h3>
+              <button type="button" class="btn btn-outline-danger btn-sm p-1">Read More</button>
+              <p class="list-subtitle text-left mt-1">5 min ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-fluid ">
+    <div class="row m-5">
+      <div class="col-md-3 col-sm-3 col-lg-3 col-xl-3 " style="box-shadow: 3px 3px  grey;height:auto;">
+        <div class="card">
+          <h5 class="card-header text-left" style="font-weight: bold;">
+            Page You May Like
+          </h5>
+          <div class="card-body">
+            <div class="profile1">
+              <img src="./img/profile/profile-small-1.jpg" class="rounded-circle" height="80px" width="80px" alt="">
+              <p style="display: inline-block;" class="m-2"><span>Travel The World</span></p>
+            </div>
+            
+            <div class="profile-info">
+              <h6 class="list-title">Adventure</h6>
+            </div>
+            <hr style="background-color: 4267B2;"> 
+            <div class="profile1 mt-2">
+              <img src="./img/profile/profile-small-4.jpg" class="rounded-circle" height="80px" width="80px" alt="">
+              <p style="display: inline-block;" class="m-2"><span>Foodcourt Nirala</span></p>
+            </div>
+            <div class="profile-info">
+              <h6 class="list-title">Food</h6>
+            </div>
+            <div class="profile1 mt-2">
+              <img src="./img/profile/profile-small-3.jpg" class="rounded-circle" height="80px" width="80px" alt="">
+              <p style="display: inline-block;" class="m-2"><span>Active Mind</span></p>
+            </div>
+            <div class="profile-info">
+              <h6 class="list-title">Fitness</h6>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+
+
+      <div class="col-md-6 col-sm-6 col-lg-6 col-xl-6 mt-3">
+
+
+
+      </div>
+
+      <div class="col-md-3 col-sm-3 col-lg-3 col-xl-3 " style="box-shadow: 3px 3px 3px grey;">
+        <div class="card">
+          <h5 class="card-header text-center" style="font-weight: bold;">
+            Recent Notifications
+          </h5>
+          <div class="card-body">
+            <div class="profile1">
+              <img src="./img/profile/profile-midle-2.jpg" height="80px" width="80px" alt="">
+            </div>
+            <div class="profile-info">
+              <h3 class="list-title">Any one can join with us if you want</h3>
+              <button type="button" class="btn btn-outline-danger btn-sm p-1">Read More</button>
+              <p class="list-subtitle text-left mt-1">5 min ago</p>
+            </div>
+            <div class="profile1">
+              <img src="./img/profile/profile-midle-2.jpg" height="80px" width="80px" alt="">
+            </div>
+            <div class="profile-info">
+              <h3 class="list-title">Any one can join with us if you want</h3>
+              <button type="button" class="btn btn-outline-danger btn-sm p-1">Read More</button>
+              <p class="list-subtitle text-left mt-1">5 min ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
