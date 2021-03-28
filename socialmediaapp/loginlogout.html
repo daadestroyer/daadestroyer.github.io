@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Sign In / Sign Out Page</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -30,6 +30,19 @@
 </head>
 
 <body>
+    <script>
+        var unamepattern = /^[A-Za-z0-9]{10,15}$/
+        var upwdpattern = /^[A-Za-z0-9!@#$%^*_-]{7,10}$/
+        function check(form){
+            var uname = form.uname.value;
+            var upwd = form.upwd.value;
+            if (unamepattern.test(uname) || upwdpattern.test(upwd)){
+                alert("Welcome to Friends Book")
+                //document.write("<h1>"+Date()+"</h1><br><br>" +"<h1>Welcome "+"<b style='color:red;'>"+uname+"</b></h1>");
+				window.location = "welcome.html"
+            }
+        }
+    </script>
     <div class="container-fluid mt-5">
         <div class="container">
             <h2 class="text-center" id="title">Friends Book</h2>
@@ -92,16 +105,16 @@
 
                             <div class="form-group">
                                 <label class="text-left">Username :</label>
-                                <input type="email" name="username" id="username" class="form-control input-lg"
+                                <input type="email" name="uname" id="username" class="form-control input-lg"
                                     placeholder="Username" />
                             </div>
                             <div class="form-group">
                                 <label class="text-left">Password :</label>
-                                <input type="password" name="password" id="password" class="form-control input-lg"
+                                <input type="password" name="upwd" id="password" class="form-control input-lg"
                                     placeholder="Password" />
                             </div>
                             <div>
-                                <button type="button" class="btn btn-lg btn-outline-success mt-3">Sign In</button>
+                                <button type="button" class="btn btn-lg btn-outline-success mt-3" onclick="check(this.form)">Sign In</button>
                             </div>
                         </fieldset>
                     </form>
