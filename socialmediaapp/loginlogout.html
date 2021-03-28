@@ -41,6 +41,18 @@
                 //document.write("<h1>"+Date()+"</h1><br><br>" +"<h1>Welcome "+"<b style='color:red;'>"+uname+"</b></h1>");
 				window.location = "welcome.html"
             }
+            else{
+                alert('Invalid Credentials')
+                window.location = "loginlogout.html"
+            }
+        
+        }
+        function check1(form){
+            var uname = form.username.value
+            var uemail = form.email.value
+            var upwd = form.password2.value
+            var upwd2 = form.password2.value
+            console.log(uname+"-"+uemail+"-"+upwd+"-"+upwd2)
         }
     </script>
     <div class="container-fluid mt-5">
@@ -61,7 +73,7 @@
                             <p class="text-uppercase pull-center"><b>Sign Up to create new account</b></p>
                             <div class="form-group">
                                 <label class="text-left">Username :</label>
-                                <input type="text" name="sername" id="username" class="form-control input-lg"
+                                <input type="text" name="username" id="username" class="form-control input-lg"
                                     placeholder="Username" />
                             </div>
 
@@ -88,7 +100,7 @@
                                 </label>
                             </div>
                             <div>
-                                <button type="button" class="btn btn-lg btn-outline-primary mt-3">Sign Up</button>
+                                <button type="button" class="btn btn-lg btn-outline-primary mt-3" onclick="check1(this.form)">Sign Up</button>
                             </div>
                     
                     </form>
