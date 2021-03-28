@@ -30,7 +30,7 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid mt-5">
         <div class="container">
             <h2 class="text-center" id="title">Friends Book</h2>
             <p class="text-center">
@@ -44,24 +44,29 @@
             <div class="row">
                 <div class="col-md-5">
                     <form role="form" method="post" action="register.php">
-                        <fieldset>
-                            <p class="text-uppercase pull-center">SIGN UP.</p>
+                    
+                            <p class="text-uppercase pull-center"><b>Sign Up to create new account</b></p>
                             <div class="form-group">
-                                <input type="text" name="username" id="username" class="form-control input-lg"
-                                    placeholder="username" />
+                                <label class="text-left">Username :</label>
+                                <input type="text" name="sername" id="username" class="form-control input-lg"
+                                    placeholder="Username" />
                             </div>
 
                             <div class="form-group">
+                                <label class="text-left">Email :</label>
                                 <input type="email" name="email" id="email" class="form-control input-lg"
                                     placeholder="Email Address" />
                             </div>
                             <div class="form-group">
+                                <label class="text-left">Password :</label>
+                            
                                 <input type="password" name="password" id="password" class="form-control input-lg"
                                     placeholder="Password" />
                             </div>
                             <div class="form-group">
+                                <label class="text-left">Repeat Password :</label>
                                 <input type="password" name="password2" id="password2" class="form-control input-lg"
-                                    placeholder="Password2" />
+                                    placeholder="Repeat your password again" />
                             </div>
                             <div class="form-check mt-3">
                                 <label class="form-check-label">
@@ -70,9 +75,9 @@
                                 </label>
                             </div>
                             <div>
-                                <input type="submit" class="btn btn-lg btn-outline-primary mt-3" value=" Register">
+                                <button type="button" class="btn btn-lg btn-outline-primary mt-3">Sign Up</button>
                             </div>
-                        </fieldset>
+                    
                     </form>
                 </div>
 
@@ -83,31 +88,27 @@
                 <div class="col-md-5">
                     <form role="form">
                         <fieldset>
-                            <p class="text-uppercase">Login using your account:</p>
+                            <p class="text-uppercase"><b>Login using your account:</b></p>
 
                             <div class="form-group">
+                                <label class="text-left">Username :</label>
                                 <input type="email" name="username" id="username" class="form-control input-lg"
-                                    placeholder="username" />
+                                    placeholder="Username" />
                             </div>
                             <div class="form-group">
+                                <label class="text-left">Password :</label>
                                 <input type="password" name="password" id="password" class="form-control input-lg"
                                     placeholder="Password" />
                             </div>
                             <div>
-                                <input type="submit" class="btn btn-md" value="Sign In" />
+                                <button type="button" class="btn btn-lg btn-outline-success mt-3">Sign In</button>
                             </div>
                         </fieldset>
                     </form>
                 </div>
             </div>
         </div>
-        <p class="text-center">
-            <small id="passwordHelpInline" class="text-muted">
-                Developer:<a href="http://www.psau.edu.ph/">
-                    Pampanga state agricultural university ?</a>
-                BS. Information and technology students @2017 Credits:
-                <a href="https://v4-alpha.getbootstrap.com/">boostrap v4.</a></small>
-        </p>
+        
     </div>
 </body>
 
