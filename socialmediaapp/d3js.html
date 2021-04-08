@@ -1,49 +1,58 @@
 <html>
    <head>
       <script type = "text/javascript" src = "https://d3js.org/d3.v4.min.js"></script>
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       <style>
          svg rect {
-            fill: gray;
+            fill: red;
          }
          
          svg text {
             fill: yellow;
-            font: 12px sans-serif;
+            font-weight:bolder;
+            font: 25px sans-serif;
             text-anchor: end;
+         }
+         body{
+            padding: 50px;
          }
       </style>
    </head>
 
    <body>
+      <h3 class="text-center">d3JS Bar Graph</h3>
       <script>
+         // created array of name data which have some number represent height of bar
          var data = [10, 5, 12, 15];
          
+         // here i define width of the bar 
          var width = 300 
-            scaleFactor = 20, 
-            barHeight = 30;
+         // here i define height of bar
+         var barHeight = 50
          
-         var graph = d3.select("body")
-            .append("svg")
-            .attr("width", width)
-            .attr("height", barHeight * data.length);
+         var scaleFactor = 20 
+        
+         var graph = d3.select("body").append("svg").attr("width", width).attr("height", barHeight * data.length);
          
-         var bar = graph.selectAll("g")
-            .data(data)
-            .enter()
-            .append("g")
+         // this is used to decide the transfomatio of the bars graph
+         var bar = graph.selectAll("g").data(data).enter().append("g")
             .attr("transform", function(d, i) {
                return "translate(0," + i * barHeight + ")";
             });
+
+         // this is used to fill the color and to draw the bar on svg 
          bar.append("rect").attr("width", function(d) {
             return d * scaleFactor;
-         })
+         }).attr("height", barHeight - 1);
          
-         .attr("height", barHeight - 1);
-         
+         // this is used to write number of the bar
          bar.append("text")
             .attr("x", function(d) { return (d*scaleFactor); })
             .attr("y", barHeight / 2)
-            .attr("dy", ".35em")
             .text(function(d) { return d; });
       </script>
    </body>
